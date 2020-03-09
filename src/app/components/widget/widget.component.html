@@ -1,0 +1,12 @@
+<!-- <app-content-main></app-content-main> -->
+<div>
+  <ul>
+    <li *ngFor="let day of days">
+        <ul>
+          <li *ngFor="let event of day.events">
+            {{event.quantity}}
+          </li>
+        </ul>
+    </li>
+  </ul>
+</div>
