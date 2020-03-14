@@ -1,7 +1,7 @@
 // @import '../../../../sass/_variables.scss';
 @import '~src/sass/_variables.scss';
-.calendar {
 
+.calendar {
   .calendar-top {
     margin-bottom: 15px;
     clear: both;
@@ -32,7 +32,7 @@
         .calendar__today-text {
           position: absolute;
           top: 5px;
-          left: 6px;
+          left: 5px;
           font-size: 11px;
         }
       }
@@ -78,12 +78,12 @@
 
         .calendar-day-bottom {
           font-size: $fontSmall;
-          .calendar-day-bottom__status{
-            &:before{
+
+          .calendar-day-bottom__status {
+            &:before {
               content: '';
               display: inline-block;
               border-radius: 50%;
-              // background-color: transparent;
               height: 5px;
               width: 5px;
             }
@@ -103,33 +103,30 @@
           }
         }
 
-        &.status-rejected{
-          .calendar-day-bottom__status{
-            &:before{
+        &.status-rejected {
+          .calendar-day-bottom__status {
+            &:before {
               background-color: red;
             }
           }
         }
 
-        &.status-approved{
-          .calendar-day-bottom__status{
-            &:before{
+        &.status-approved {
+          .calendar-day-bottom__status {
+            &:before {
               background-color: green;
             }
           }
         }
 
-        &.status-neutral{
-          .calendar-day-bottom__status{
-            &:before{
+        &.status-neutral {
+          .calendar-day-bottom__status {
+            &:before {
               background-color: $colorGrey;
             }
           }
         }
-
-
       }
     }
-
   }
 }
