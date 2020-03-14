@@ -7,9 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/widget/header/header.component';
 import { ContentMainComponent } from './components/widget/content-main/content-main.component';
 import { FooterComponent } from './components/widget/footer/footer.component';
-import { HoursComponent } from './components/widget/content-main/hours/hours.component';
-import { ExpensesComponent } from './components/widget/content-main/expenses/expenses.component';
-import { HoursAdditionalComponent } from './components/widget/content-main/hours-additional/hours-additional.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { WidgetDataService } from './services/widget-data.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,9 +22,6 @@ import { MatIconModule } from "@angular/material/icon";
     HeaderComponent,
     ContentMainComponent,
     FooterComponent,
-    HoursComponent,
-    ExpensesComponent,
-    HoursAdditionalComponent,
     WidgetComponent,
     CalendarComponent
   ],
