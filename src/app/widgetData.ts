@@ -33,6 +33,20 @@ export const widgetData: Day[] = [
         eventType: EnumDayEventType.WORKING_TIME,
         firstTaskStart: moment('2020-03-09 10:00'),
         lastTaskEnd: moment('2020-03-09 12:00')
+      },
+      {
+        quantity: 0,
+        price: 0,
+        isHoursEventType: true,
+        isExpenseType: false,
+        isAdditionalHoursEventType: false,
+        isWorkHour: false,
+        isApproved: false,
+        isRejected: true,
+        tasksCount: 10,
+        eventType: EnumDayEventType.WORKING_TIME,
+        firstTaskStart: moment('2020-03-09 13:00'),
+        lastTaskEnd: moment('2020-03-09 16:00')
       }
     ]
   },
