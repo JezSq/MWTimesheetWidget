@@ -1,0 +1,70 @@
+@import '~src/sass/_variables.scss';
+
+.summary {
+  padding: 0px 15px 15px 15px;
+  clear: both;
+  width: 100%;
+  float: left;
+  overflow-y: auto;
+  max-height: 200px;;
+
+  .summary-group {
+    clear: both;
+    width: 100%;
+    float: left;
+    &:not(:first-of-type){
+      margin-top: 15px;
+    }
+
+    .summary-group-header {
+      background: #dbdbdd;
+      width: 100%;
+      float: left;
+      border-radius: $borderRadius;
+      padding: 5px 10px;
+
+      .summary-group-header__left {
+        float: left;
+        font-weight: 500;
+
+        .icon,
+        .title {
+          display: inline-block;
+          position: relative;
+        }
+
+        .icon {
+          top: 2px;
+        }
+
+        .title {
+          top: -4px;
+          margin-left: 10px;
+        }
+      }
+
+      .summary-group-header__right {
+        color: $colorGrey;
+        float: right;
+
+        span {
+          display: inline-block;
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
+
+    .summary-group-data {
+      clear: both;
+      font-size: $fontSmall;
+      table {
+        width: 100%;
+        th {
+          font-weight: normal;
+          color: $colorGrey;
+        }
+      }
+    }
+  }
+}

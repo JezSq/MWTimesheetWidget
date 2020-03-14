@@ -1,4 +1,8 @@
 export enum EnumDayEventType {
-  WorkingTime = 'Working time',
-  Overtime = 'Overtime 50%'
+  WORKING_TIME = 'Working time',
+  OVERTIME = 'Overtime',
+  LIFTLEIE_DAGPRIS = 'Liftleie dagpris',
+  EXPENSE_DUMMY_TYPE = 'Expense dummy type',
+  LIFTLEIE_TIMPERIS = 'Liftleie timepris',
+  ADDITIONAL_DUMMY_TYPE = 'Additional dummy type'
 }

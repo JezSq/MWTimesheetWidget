@@ -14,6 +14,10 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { WidgetDataService } from './services/widget-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WidgetComponent } from './components/widget/widget.component';
+import { CalendarComponent } from './components/widget/header/calendar/calendar.component';
+import { MatIconModule } from "@angular/material/icon";
+
+
 
 @NgModule({
   declarations: [
@@ -24,13 +28,14 @@ import { WidgetComponent } from './components/widget/widget.component';
     HoursComponent,
     ExpensesComponent,
     HoursAdditionalComponent,
-    WidgetComponent
-
+    WidgetComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatIconModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(WidgetDataService, { dataEncapsulation: false })
   ],

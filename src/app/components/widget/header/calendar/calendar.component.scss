@@ -1,0 +1,135 @@
+// @import '../../../../sass/_variables.scss';
+@import '~src/sass/_variables.scss';
+.calendar {
+
+  .calendar-top {
+    margin-bottom: 15px;
+    clear: both;
+    float: left;
+    width: 100%;
+
+    .calendar-top-left {
+      float: left;
+
+      .calendar-top-month,
+      .calendar-top-year {
+        font-size: $fontLarge;
+        font-weight: 500;
+      }
+
+      .calendar-top-month {
+        margin-right: 5px;
+      }
+    }
+
+    .calendar-top-right {
+      float: right;
+
+      .calendar__today {
+        position: relative;
+        cursor: pointer;
+
+        .calendar__today-text {
+          position: absolute;
+          top: 5px;
+          left: 6px;
+          font-size: 11px;
+        }
+      }
+    }
+
+  }
+
+  .calendar-days {
+    clear: both;
+
+    .calendar-day {
+      text-align: center;
+
+      .calendar-day__wrapper {
+        cursor: pointer;
+        width: 30px;
+        margin: 0 auto;
+
+        &.weekend {
+          color: $colorGrey;
+        }
+
+        .calendar-day-top {
+          font-size: $fontSmall;
+          margin-bottom: 8px;
+        }
+
+        .calendar-day-middle {
+          font-size: $fontLarge;
+          font-weight: 500;
+          border: 1px solid transparent;
+          border-radius: $borderRadius;
+          height: 30px;
+          position: relative;
+
+          span {
+            display: block;
+            position: relative;
+            top: 5px;
+            left: -1px;
+          }
+        }
+
+        .calendar-day-bottom {
+          font-size: $fontSmall;
+          .calendar-day-bottom__status{
+            &:before{
+              content: '';
+              display: inline-block;
+              border-radius: 50%;
+              // background-color: transparent;
+              height: 5px;
+              width: 5px;
+            }
+          }
+        }
+
+        &.today {
+          .calendar-day-middle {
+            border-color: $colorOrange;
+          }
+        }
+
+        &.selected {
+          .calendar-day-middle {
+            background-color: $colorOrange;
+            color: #fff;
+          }
+        }
+
+        &.status-rejected{
+          .calendar-day-bottom__status{
+            &:before{
+              background-color: red;
+            }
+          }
+        }
+
+        &.status-approved{
+          .calendar-day-bottom__status{
+            &:before{
+              background-color: green;
+            }
+          }
+        }
+
+        &.status-neutral{
+          .calendar-day-bottom__status{
+            &:before{
+              background-color: $colorGrey;
+            }
+          }
+        }
+
+
+      }
+    }
+
+  }
+}

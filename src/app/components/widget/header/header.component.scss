@@ -1,0 +1,32 @@
+@import '~src/sass/_variables.scss';
+.header {
+  // height: 296px;
+
+  .header-top{
+    padding: 15px 15px 10px 15px;
+  }
+
+  .header-bottom {
+    border-top: 1px solid #DBDBDD;
+    clear: both;
+    padding: 15px;
+    float: left;
+    width: 100%;
+
+    .header-bottom-left {
+      float: left;
+      font-weight: 500;
+    }
+
+    .header-bottom-right {
+      float: right;
+
+      a {
+        color: $colorOrange;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+  }
+}

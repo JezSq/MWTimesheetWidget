@@ -1,0 +1,36 @@
+<div class="calendar">
+  <div class="calendar-top">
+    <div class="calendar-top-left">
+      <span class="calendar-top-month">{{selectedDay.date.format('MMM')}}</span>
+      <span class="calendar-top-year">{{selectedDay.date.format('YYYY')}}</span>
+    </div>
+
+    <div class="calendar-top-right">
+      <div class="calendar__today" (click)="selectDate(currentDate)">
+        <span class="calendar__today-icon">
+          <mat-icon>calendar_today</mat-icon>
+        </span>
+        <span class="calendar__today-text">{{currentDate.format('DD')}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="calendar-days flex-container">
+    <div class="calendar-day flex-col" *ngFor="let dayData of daysData">
+      <div class="calendar-day__wrapper status-{{dayData.status}}"
+        [ngClass]="{weekend: dayData.isWeekend, today: dayData.isToday, selected: selectedDay.date.format('DD.MM.YYYY') === dayData.date.format('DD.MM.YYYY')}"
+        (click)="selectDay(dayData)">
+        <div class="calendar-day-top">{{dayData.date.format('ddd')}}</div>
+
+        <div class="calendar-day-middle"><span>{{dayData.date.format('D')}}</span></div>
+
+        <div class="calendar-day-bottom">
+          <div class="calendar-day-bottom__hours">{{dayData.workHours}}</div>
+          <div class="calendar-day-bottom__status"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

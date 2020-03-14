@@ -1,5 +1,73 @@
-<div>
-  <app-hours></app-hours>
-  <app-expenses></app-expenses>
-  <app-hours-additional></app-hours-additional>
+<div class="summary">
+  <div class="summary-group" *ngIf="firstWorkingHour || lastWorkingHour">
+    <div class="summary-group-header">
+      <div class="summary-group-header__left">
+        <span class="icon"><mat-icon>access_time</mat-icon></span>
+        <span class="title">Hours</span>
+      </div>
+      <div class="summary-group-header__right"><span>({{firstWorkingHour}} - {{lastWorkingHour}})</span></div>
+    </div>
+    <div class="summary-group-data">
+      <table>
+
+        <tr>
+          <th class="text-left">Type</th>
+          <th class="text-right">Duration</th>
+        </tr>
+        <tr *ngIf="workingHours">
+          <td class="text-left">Working time</td>
+          <td class="text-right">{{workingHours}}</td>
+        </tr>
+        <tr *ngIf="overtimeHours">
+          <td class="text-left">Overtime 50%</td>
+          <td class="text-right">{{overtimeHours}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="summary-group" *ngIf="expenseQuantity">
+    <div class="summary-group-header">
+      <div class="summary-group-header__left">
+        <span class="icon"><mat-icon>credit_card</mat-icon></span>
+        <span class="title">Expenses</span>
+      </div>
+    </div>
+    <div class="summary-group-data">
+      <table>
+        <tr>
+          <th class="text-left">Type</th>
+          <th class="text-right">Quantity</th>
+          <th class="text-right">Duration</th>
+        </tr>
+        <tr *ngIf="workingHours">
+          <td class="text-left">Liftleie dagpris</td>
+          <td class="text-right">{{expenseQuantity}}</td>
+          <td class="text-right">{{expenseSum}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="summary-group" *ngIf="additionalHours">
+    <div class="summary-group-header">
+      <div class="summary-group-header__left">
+        <span class="icon"><mat-icon>timelapse</mat-icon></span>
+        <span class="title">Additional hours</span>
+      </div>
+    </div>
+    <div class="summary-group-data">
+      <table>
+        <tr>
+          <th class="text-left">Type</th>
+          <th class="text-right">Amount</th>
+        </tr>
+        <tr *ngIf="workingHours">
+          <td class="text-left">Liftleie timepris</td>
+          <td class="text-right">{{additionalHours}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>

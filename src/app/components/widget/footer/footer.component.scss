@@ -1,0 +1,17 @@
+@import '~src/sass/_variables.scss';
+
+.footer{
+  background: #dbdbdd;
+  float: left;
+  clear: both;
+  width: 100%;
+  padding: 15px;
+  .button__main{
+    background-color: $colorOrange;
+    width: 100%;
+    color: #fff;
+    border-radius: $borderRadius;
+    border: none;
+    height: 35px;
+  }
+}

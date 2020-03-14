@@ -1,16 +1,17 @@
 import { EnumDayEventType } from './EnumDayEventType';
+import * as moment from 'moment';
 
 export interface DayEvent {
-  quantity: Number,
-  price: Number,
+  quantity: number,
+  price: number,
   eventType: EnumDayEventType,
-  isExpenseType: Boolean,
-  isHoursEventType: Boolean,
-  isAdditionalHoursEventType: Boolean,
+  isExpenseType: boolean,
+  isHoursEventType: boolean,
+  isAdditionalHoursEventType: boolean,
   isWorkHour: Boolean,
   isApproved: Boolean,
   isRejected: Boolean,
-  tasksCount: Number,
-  firstTaskStart: Date,
-  lastTaskEnd: Date
+  tasksCount: number,
+  firstTaskStart: moment.Moment,
+  lastTaskEnd: moment.Moment
 }
